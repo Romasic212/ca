@@ -1,0 +1,55 @@
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .burger-menu {
+        display: block; /* Показываем кнопку на маленьких экранах */
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .subjects-grid {
+        grid-template-columns: 1fr;
+        /* One column on smaller screns*/
+    }
+
+    .subject-card {
+        padding: 0px;
+        text-align: center;
+    }
+
+    .subject-body {
+        height: auto;
+        /* Expand height to fit items*/
+    }
+
+    .progress-circle {
+        align-self: center;
+        /* Center circle*/
+    }
+
+}
+/*-----------------------------------Mobile design landscape------------------------------------------*/
+@media (max-width: 992px) and (orientation: landscape) {
+    .subjects-grid {
+      grid-template-columns: repeat(2, 1fr); /* Два столбца в альбомной ориентации на планшетах */
+    }
+
+.nav-items {
+flex-direction: row; /* Возвращаем навигацию в горизонтальное положение */
+margin-top: 0;
+}
+
+.nav-items a {
+margin: 0 10px; /* Уменьшаем отступы между элементами навигации */
+}
+}
+/*-----------------------------------Tablet design------------------------------------------*/
+@media (min-width: 768px) and (max-width: 992px) {
+.subjects-grid {
+    grid-template-columns: repeat(2, 1fr); /* Два столбца на планшетах */
+}   
+}
